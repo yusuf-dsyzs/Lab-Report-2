@@ -1,0 +1,41 @@
+#define YL 4
+#define PP 33
+#define RD 25
+#define PK 2
+#define GN 26
+#define WT 0
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+  // define the pins we want to read
+  // the intials attached correlete to the colour
+  pinMode(YL,INPUT);
+  pinMode(PP,INPUT);
+  pinMode(RD,INPUT);
+  pinMode(PK,INPUT);
+  pinMode(GN,INPUT);
+  pinMode(WT,INPUT);
+  Serial.begin(9600);
+}
+
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  Serial.print(analogRead(YL)); //> 3404 ? "1" : "0");
+  Serial.print(",");
+  Serial.print(analogRead(PP)); //> 3362 ? "1" : "0");
+  Serial.print(",");
+  Serial.print(analogRead(RD)); //> 3385 ? "1" : "0");
+  Serial.print(",");
+  Serial.print(analogRead(PK)); //> 3403 ? "1" : "0");
+  Serial.print(",");
+  Serial.print(analogRead(GN)); //> 3380 ? "1" : "0");
+  Serial.print(",");
+  Serial.print(analogRead(WT)); //> 3380 ? "1" : "0");
+  Serial.println();
+
+  delay(20);
+}
